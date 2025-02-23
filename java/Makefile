@@ -1,6 +1,6 @@
 ### java/Makefile.  Generated from Makefile.in by configure.
 
-# Copyright (C) 2023-2024 Free Software Foundation, Inc.
+# Copyright (C) 2023-2025 Free Software Foundation, Inc.
 
 # This file is part of GNU Emacs.
 
@@ -21,7 +21,7 @@ top_builddir = ..
 top_srcdir = ..
 srcdir = .
 builddir = .
-version = 30.0.93
+version = 30.1
 
 # Don't install movemail if mailutils are to be used.
 emacs_use_mailutils = 

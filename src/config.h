@@ -3,7 +3,7 @@
 
 /* GNU Emacs site configuration template file.
 
-Copyright (C) 1988-2024 Free Software Foundation, Inc.
+Copyright (C) 1988-2025 Free Software Foundation, Inc.
 
 This file is part of GNU Emacs.
 
@@ -75,7 +75,7 @@ along with GNU Emacs.  If not, see <https://www.gnu.org/licenses/>.  */
 /* #undef CHECK_STRUCTS */
 
 /* Short copyright string for this version of Emacs. */
-#define COPYRIGHT "Copyright (C) 2024 Free Software Foundation, Inc."
+#define COPYRIGHT "Copyright (C) 2025 Free Software Foundation, Inc."
 
 /* Define if the system is Cygwin. */
 /* #undef CYGWIN */
@@ -2094,7 +2094,7 @@ along with GNU Emacs.  If not, see <https://www.gnu.org/licenses/>.  */
 #define PACKAGE_NAME "GNU Emacs"
 
 /* Define to the full name and version of this package. */
-#define PACKAGE_STRING "GNU Emacs 30.0.93"
+#define PACKAGE_STRING "GNU Emacs 30.1"
 
 /* Define to the one symbol short name of this package. */
 #define PACKAGE_TARNAME "emacs"
@@ -2103,7 +2103,7 @@ along with GNU Emacs.  If not, see <https://www.gnu.org/licenses/>.  */
 #define PACKAGE_URL "https://www.gnu.org/software/emacs/"
 
 /* Define to the version of this package. */
-#define PACKAGE_VERSION "30.0.93"
+#define PACKAGE_VERSION "30.1"
 
 /* Define to empty to suppress deprecation warnings when building with
    --enable-gcc-warnings and with libpng versions before 1.5, which lack

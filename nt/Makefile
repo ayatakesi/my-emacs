@@ -1,6 +1,6 @@
 ### nt/Makefile.  Generated from Makefile.in by configure.
 
-# Copyright (C) 2013-2024 Free Software Foundation, Inc.
+# Copyright (C) 2013-2025 Free Software Foundation, Inc.
 
 # This file is part of GNU Emacs.
 
@@ -28,7 +28,7 @@ CFLAGS=-g3 -O2
 CPPFLAGS =   
 LDFLAGS = 
 
-version=30.0.93
+version=30.1
 ## Used in $archlibdir.
 configuration=x86_64-pc-linux-gnu
 EXEEXT=

@@ -1,6 +1,6 @@
 ### src/Makefile.  Generated from Makefile.in by configure.
 
-# Copyright (C) 1985, 1987-1988, 1993-1995, 1999-2024 Free Software
+# Copyright (C) 1985, 1987-1988, 1993-1995, 1999-2025 Free Software
 # Foundation, Inc.
 
 # This file is part of GNU Emacs.
@@ -58,7 +58,7 @@ CFLAGS = -g3 -O2
 CPPFLAGS =   
 LDFLAGS = 
 EXEEXT = 
-version = 30.0.93
+version = 30.1
 MKDIR_P = /usr/bin/mkdir -p
 # Don't use LIBS.  configure puts stuff in it that either shouldn't be
 # linked with Emacs or is duplicated by the other stuff below.

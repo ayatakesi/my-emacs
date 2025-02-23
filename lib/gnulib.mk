@@ -1,5 +1,5 @@
 ## DO NOT EDIT! GENERATED AUTOMATICALLY!
-# Copyright (C) 2002-2024 Free Software Foundation, Inc.
+# Copyright (C) 2002-2025 Free Software Foundation, Inc.
 #
 # This file is free software; you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
@@ -1101,10 +1101,10 @@ OBJEXT = o
 OTHER_FILES = 
 PACKAGE_BUGREPORT = bug-gnu-emacs@gnu.org
 PACKAGE_NAME = GNU Emacs
-PACKAGE_STRING = GNU Emacs 30.0.93
+PACKAGE_STRING = GNU Emacs 30.1
 PACKAGE_TARNAME = emacs
 PACKAGE_URL = https://www.gnu.org/software/emacs/
-PACKAGE_VERSION = 30.0.93
+PACKAGE_VERSION = 30.1
 PATH_SEPARATOR = :
 PAXCTL = 
 PAXCTL_dumped = 
@@ -1429,7 +1429,7 @@ canonical = x86_64-pc-linux-gnu
 comma_space_version = 
 comma_version = 
 configuration = x86_64-pc-linux-gnu
-copyright = Copyright (C) 2024 Free Software Foundation, Inc.
+copyright = Copyright (C) 2025 Free Software Foundation, Inc.
 datadir = ${datarootdir}
 datarootdir = ${prefix}/share
 docdir = ${datarootdir}/doc/${PACKAGE_TARNAME}
@@ -1515,7 +1515,7 @@ srcdir = .
 standardlisppath = ${lispdir}
 sysconfdir = ${prefix}/etc
 target_alias = 
-version = 30.0.93
+version = 30.1
 with_mailutils = no
 x_default_search_path = 
 # End of GNU Make output.

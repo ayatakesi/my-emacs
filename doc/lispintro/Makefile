@@ -1,6 +1,6 @@
 ### doc/lispintro/Makefile.  Generated from Makefile.in by configure.
 
-# Copyright (C) 1994-1999, 2001-2024 Free Software Foundation, Inc.
+# Copyright (C) 1994-1999, 2001-2025 Free Software Foundation, Inc.
 
 # This file is part of GNU Emacs.
 

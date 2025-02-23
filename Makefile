@@ -1,6 +1,6 @@
 ### Makefile.  Generated from Makefile.in by configure.
 
-# Copyright (C) 1992-2024 Free Software Foundation, Inc.
+# Copyright (C) 1992-2025 Free Software Foundation, Inc.
 
 # This file is part of GNU Emacs.
 
@@ -92,7 +92,7 @@ EXEEXT=
 
 ### This should be the number of the Emacs version we're building,
 ### like '24.5' or '25.0.50'.
-version=30.0.93
+version=30.1
 
 ### This should be the name of the configuration we're building Emacs
 ### for, like 'x86_64-unknown-linux-gnu' or 'powerpc-ibm-aix7.1.2.0'.
@@ -1303,7 +1303,7 @@ emacslog = build-aux/gitlog-to-emacslog
 # The ChangeLog history files are called ChangeLog.1, ChangeLog.2, ...,
 # ChangeLog.$(CHANGELOG_HISTORY_INDEX_MAX).  $(CHANGELOG_N) stands for
 # the newest (highest-numbered) ChangeLog history file.
-CHANGELOG_HISTORY_INDEX_MAX = 4
+CHANGELOG_HISTORY_INDEX_MAX = 5
 CHANGELOG_N = ChangeLog.$(CHANGELOG_HISTORY_INDEX_MAX)
 
 # Convert git commit log to ChangeLog file.  make-dist uses this.

@@ -1,6 +1,6 @@
 ### doc/emacs/Makefile.  Generated from Makefile.in by configure.
 
-# Copyright (C) 1994, 1996-2024 Free Software Foundation, Inc.
+# Copyright (C) 1994, 1996-2025 Free Software Foundation, Inc.
 
 # This file is part of GNU Emacs.
 
@@ -30,7 +30,7 @@ top_srcdir = ../..
 
 top_builddir = ../..
 
-version = 30.0.93
+version = 30.1
 
 ## Where the output files go.
 ## Note that the setfilename command in the .texi files assumes this.

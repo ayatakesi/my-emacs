@@ -1,6 +1,6 @@
 ### doc/lispref/Makefile.  Generated from Makefile.in by configure.
 
-# Copyright (C) 1990-1996, 1998-2024 Free Software Foundation, Inc.
+# Copyright (C) 1990-1996, 1998-2025 Free Software Foundation, Inc.
 
 # This file is part of GNU Emacs.
 

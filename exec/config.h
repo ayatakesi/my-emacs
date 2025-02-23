@@ -1,7 +1,7 @@
 /* config.h.  Generated from config.h.in by configure.  */
 /* config.h.in.  Generated from configure.ac by autoheader.  */
 
-/* Copyright (C) 2024 Free Software Foundation, Inc.
+/* Copyright (C) 2024-2025 Free Software Foundation, Inc.
 
 This file is part of GNU Emacs.
 
@@ -122,7 +122,7 @@ along with GNU Emacs.  If not, see <https://www.gnu.org/licenses/>. */
 #define PACKAGE_NAME "libexec"
 
 /* Define to the full name and version of this package. */
-#define PACKAGE_STRING "libexec 30.0.93"
+#define PACKAGE_STRING "libexec 30.1"
 
 /* Define to the one symbol short name of this package. */
 #define PACKAGE_TARNAME "libexec"
@@ -131,7 +131,7 @@ along with GNU Emacs.  If not, see <https://www.gnu.org/licenses/>. */
 #define PACKAGE_URL "https://www.gnu.org/software/emacs/"
 
 /* Define to the version of this package. */
-#define PACKAGE_VERSION "30.0.93"
+#define PACKAGE_VERSION "30.1"
 
 /* Define to number of the `readlinkat' system call. */
 #define READLINKAT_SYSCALL __NR_readlinkat

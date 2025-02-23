@@ -1,6 +1,6 @@
 ### cross/ndk-build/Makefile.  Generated from Makefile.in by configure.
 
-# Copyright 2023-2024 Free Software Foundation, Inc.
+# Copyright 2023-2025 Free Software Foundation, Inc.
 
 # This file is part of GNU Emacs.
 
