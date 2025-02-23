@@ -52,11 +52,6 @@ Stefan Monnier
 	minibuffer completion
 	lisp/outline.el
 
-Bastien Guerry
-        Org
-            lisp/org/*
-	    doc/misc/org.texi
-
 Artur Malabarba
 	lisp/emacs-lisp/let-alist.el
 
@@ -251,11 +246,6 @@ maintainership to someone listed above, but who want to continue to be
 CC'd as though they were still the primary maintainer, in the meantime.
 ==============================================================================
 
-Kelvin White
-       ERC
-           lisp/erc/*
-           doc/misc/erc.texi
-
 Eli Zaretskii
     	doc/*
 
@@ -391,6 +381,38 @@ Spencer Baugh
 3. Externally maintained packages.
 ==============================================================================
 
+CC Mode
+	Maintainer: Alan Mackenzie
+	Website: https://www.nongnu.org/cc-mode
+	Repository: https://hg.savannah.nongnu.org/hgweb/cc-mode/
+	Bug reports: bug-cc-mode@gnu.org
+
+	lisp/progmodes/cc-*.el
+
+Modus themes
+        Maintainer: Protesilaos Stavrou
+        Repository:  https://github.com/protesilaos/modus-themes
+
+        doc/misc/modus-themes.org
+        etc/themes/modus*.el
+
+Org Mode
+	Maintainer: Org Mode developers
+	Website: https://orgmode.org/
+	Repository: https://git.savannah.gnu.org/git/emacs/org-mode.git
+	Mailing list: emacs-orgmode@gnu.org
+	Bug Reports: M-x org-submit-bug-report
+	Notes: Org Mode is maintained as a separate project that is
+          periodically merged into Emacs.  To view or participate in
+          Org Mode development, please go to https://orgmode.org/ and
+          follow the instructions there.
+
+	lisp/org/*.el
+	etc/org/*
+	etc/refcards/orgcard.tex
+	doc/misc/org.org
+	doc/misc/org-setup.org
+
 Tramp
 	Maintainer: Michael Albinus
 	Repository: https://git.savannah.gnu.org/git/tramp.git
@@ -409,30 +431,6 @@ Transient
 
 	lisp/transient.el
 	doc/misc/transient.texi
-
-Modus themes
-        Maintainer: Protesilaos Stavrou
-        Repository:  https://github.com/protesilaos/modus-themes
-
-        doc/misc/modus-themes.org
-        etc/themes/modus*.el
-
-Org Mode
-	Home Page: https://orgmode.org/
-	Maintainer: Org Mode developers
-	Repository: https://git.savannah.gnu.org/git/emacs/org-mode.git
-	Mailing list: emacs-orgmode@gnu.org
-	Bug Reports: M-x org-submit-bug-report
-	Notes: Org Mode is maintained as a separate project that is
-          periodically merged into Emacs.  To view or participate in
-          Org Mode development, please go to https://orgmode.org/ and
-          follow the instructions there.
-
-	lisp/org/*.el
-	etc/org/*
-	etc/refcards/orgcard.tex
-	doc/misc/org.org
-	doc/misc/org-setup.org
 
 
 ;;; Local Variables:

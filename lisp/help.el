@@ -1,6 +1,6 @@
 ;;; help.el --- help commands for Emacs  -*- lexical-binding:t -*-
 
-;; Copyright (C) 1985-1986, 1993-1994, 1998-2024 Free Software
+;; Copyright (C) 1985-1986, 1993-1994, 1998-2025 Free Software
 ;; Foundation, Inc.
 
 ;; Maintainer: emacs-devel@gnu.org
@@ -2381,7 +2381,7 @@ the same names as used in the original source code, when possible."
             (dolist (arg arglist)
               (unless (and (symbolp arg)
                            (let ((name (symbol-name arg)))
-                             (if (eq (aref name 0) ?&)
+                             (if (and (> (length name) 0) (eq (aref name 0) ?&))
                                  (memq arg '(&rest &optional))
                                (not (string-search "." name)))))
                 (setq valid nil)))

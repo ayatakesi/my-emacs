@@ -167,7 +167,7 @@ CC Mode
 @copying
 This manual is for CC Mode in Emacs.
 
-Copyright @copyright{} 1995--2024 Free Software Foundation, Inc.
+Copyright @copyright{} 1995--2025 Free Software Foundation, Inc.
 
 @quotation
 Permission is granted to copy, distribute and/or modify this document
@@ -581,7 +581,7 @@ you are going to be editing AWK files, @file{README} describes how to
 configure your (X)Emacs so that @ccmode{} will supersede the obsolete
 @code{awk-mode.el} which might have been supplied with your (X)Emacs.
 @ccmode{} might not work with older versions of Emacs or XEmacs.  See
-the @ccmode{} release notes at @uref{https://cc-mode.sourceforge.net}
+the @ccmode{} release notes at @uref{https://www.nongnu.org/cc-mode/}
 for the latest information on Emacs version and package compatibility
 (@pxref{Updating CC Mode}).
 
@@ -3189,11 +3189,11 @@ margins of the texts kept intact:
 @cindex Filladapt mode
 It's also possible to use other adaptive filling packages, notably Kyle
 E. Jones' Filladapt package@footnote{It's available from
-@uref{http://www.wonderworks.com/}.  As of version 2.12, it does however
+@uref{https://elpa.gnu.org/packages/filladapt.html}.  As of version 2.12, it does however
 lack a feature that makes it work suboptimally when
 @code{c-comment-prefix-regexp} matches the empty string (which it does
 by default).  A patch for that is available from
-@uref{https://cc-mode.sourceforge.net/,, the CC Mode web site}.},
+@uref{https://www.nongnu.org/cc-mode/,, the CC Mode web site}.},
 @c 2005/11/22:  The above is still believed to be the case.
 which handles things like bulleted lists nicely.  There's a convenience
 function @code{c-setup-filladapt} that tunes the relevant variables in
@@ -6047,7 +6047,7 @@ Line up the second entry of a brace block under the first, when the
 first line is also contained in an arglist or an enclosing brace
 @emph{on that line}.
 
-I.e. handle something like the following:
+In other words, handle something like the following:
 
 @example
 @group
@@ -6081,7 +6081,7 @@ Line up the second entry of a class (etc.) initializer
 @code{c-basic-offset} characters in from the identifier when:
 @enumerate
 @item
-The type is a class, struct, union, etc. (but not an enum);
+The type is a class, struct, union, etc.@: (but not an enum);
 @item
 There is a brace block in the type declaration, specifying it; and
 @item
@@ -6089,7 +6089,7 @@ The first element of the initializer is on the same line as its
 opening brace.
 @end enumerate
 
-I.e. we have a construct like this:
+In other words, we have a construct like this:
 
 @example
 @group
@@ -6123,7 +6123,7 @@ Line up the second entry of a class (etc.) initializer after its
 opening brace when:
 @enumerate
 @item
-The type is a class, struct, union, etc. (but not an enum);
+The type is a class, struct, union, etc.@: (but not an enum);
 @item
 There is a brace block in the type declaration, specifying it; and
 @item
@@ -6131,7 +6131,7 @@ The first element of the initializer is on the same line as its
 opening brace.
 @end enumerate
 
-I.e. we have a construct like this:
+In other words, we have a construct like this:
 
 @example
 @group
@@ -6445,7 +6445,7 @@ function is the same as specifying a list @code{(c-lineup-assignments
 @defun c-lineup-ternary-bodies
 @findex lineup-ternary-bodies @r{(c-)}
 Line up true and false branches of a ternary operator
-(i.e. @code{?:}).  More precisely, if the line starts with a colon
+(i.e., @code{?:}).  More precisely, if the line starts with a colon
 which is a part of a said operator, align it with corresponding
 question mark.  For example:
 
@@ -7018,7 +7018,7 @@ is @code{nil}, all lines inside macro definitions are analyzed as
 @end defopt
 
 Sometimes you may want to indent particular directives
-(e.g. @code{#pragma}) as though they were statements.  To do this, see
+(e.g., @code{#pragma}) as though they were statements.  To do this, see
 @ref{Indenting Directives}.
 
 Because a macro can expand into anything at all, near where one is
@@ -7210,7 +7210,7 @@ after the mode hooks have run.
 @comment !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
 Sometimes you may want to indent particular preprocessor directives
-(e.g. @code{#pragma}) as though they were statements.  To do this,
+(e.g., @code{#pragma}) as though they were statements.  To do this,
 first set up @code{c-cpp-indent-to-body-directives} to include the
 directive name(s), then enable the ``indent to body'' feature with
 @code{c-toggle-cpp-indent-to-body}.
@@ -7660,7 +7660,7 @@ have old versions of @ccmode{} and so should be upgraded.  Access to the
 compatibility, etc.@: are all available on the web site:
 
 @quotation
-@uref{https://cc-mode.sourceforge.net/}
+@uref{https://www.nongnu.org/cc-mode/}
 @end quotation
 
 
@@ -7694,7 +7694,7 @@ the GNU Bug Tracker at @url{https://debbugs.gnu.org}, then sends it on
 to @email{bug-cc-mode@@gnu.org}.  You can also send reports, other
 questions, and suggestions (kudos?@: @t{;-)} to that address.  It's a
 mailing list which you can join or browse an archive of; see the web site at
-@uref{https://cc-mode.sourceforge.net/} for further details.
+@uref{https://www.nongnu.org/cc-mode/} for further details.
 
 @cindex announcement mailing list
 If you want to get announcements of new @ccmode{} releases, send the

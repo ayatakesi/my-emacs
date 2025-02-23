@@ -1,6 +1,6 @@
 ;;; heex-ts-mode.el --- Major mode for Heex with tree-sitter support -*- lexical-binding: t; -*-
 
-;; Copyright (C) 2022-2024 Free Software Foundation, Inc.
+;; Copyright (C) 2022-2025 Free Software Foundation, Inc.
 
 ;; Author: Wilhelm H Kirschbaum <wkirschbaum@gmail.com>
 ;; Created: November 2022
@@ -54,7 +54,7 @@
 (defconst heex-ts--sexp-regexp
   (rx bol
       (or "directive" "tag" "component" "slot"
-          "attribute" "attribute_value" "quoted_attribute_value")
+          "attribute" "attribute_value" "quoted_attribute_value" "expression")
       eol))
 
 ;; There seems to be no parent directive block for tree-sitter-heex,
@@ -81,6 +81,7 @@
        ((node-is "end_slot") parent-bol 0)
        ((node-is "/>") parent-bol 0)
        ((node-is ">") parent-bol 0)
+       ((node-is "}") parent-bol 0)
        ((parent-is "comment") prev-adaptive-prefix 0)
        ((parent-is "component") parent-bol ,offset)
        ((parent-is "tag") parent-bol ,offset)
@@ -112,7 +113,7 @@
      `((special_attribute_name) @font-lock-keyword-face)
      :language 'heex
      :feature 'heex-string
-     `([(attribute_value) (quoted_attribute_value)] @font-lock-constant-face)
+     `([(attribute_value) (quoted_attribute_value)] @font-lock-string-face)
      :language 'heex
      :feature 'heex-component
      `([

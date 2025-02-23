@@ -47356,7 +47356,7 @@
 	possible bug.
 
 	* lisp/progmodes/flymake.el (flymake--mode-line-counter): Must
-	explicily create a new string unpropertized string
+	explicitly create a new string unpropertized string
 
 2020-12-31  João Távora  <joaotavora@gmail.com>
 
@@ -160589,7 +160589,7 @@
 	to be replaced with an appropriate character reference.  Make
 	‘sgml-quote’ do that.
 
-	While at it, fix entiteis not being unquoted if they lack closing
+	While at it, fix entities not being unquoted if they lack closing
 	semicolon (e.g. ‘&amp’) occurring at the very end of a region.
 	Even though unlikely, make ‘sgml-quote’ handle this scenario.
 
@@ -186569,7 +186569,7 @@
 	Delete a Flymake obsolete alias that can't possibly work
 
 	The function `flymake-ler-make-ler' can't possibly work as an backward
-	compatible interface to existing extensinos (even purely hypothetical
+	compatible interface to existing extensions (even purely hypothetical
 	ones, since none are known).  This is because every diagnostic
 	considered by Flymake has to passed to a report-fn function.
 
@@ -223234,7 +223234,7 @@
 	called any longer.
 
 	Furthermore, when newline has whitespace syntax, ‘\s-$’ regular
-	expression ends up matching empty lins since ‘\s-’ matches newline
+	expression ends up matching empty lines since ‘\s-’ matches newline
 	characetr of proceeding line.  This leads to needless loop iterations.
 
 	Since previous change to ‘delete-trailing-whitespace’ already introduced
@@ -237356,7 +237356,7 @@ See ChangeLog.2 for earlier changes.
 ;; coding: utf-8
 ;; End:
 
-  Copyright (C) 2015-2024 Free Software Foundation, Inc.
+  Copyright (C) 2015-2025 Free Software Foundation, Inc.
 
   This file is part of GNU Emacs.
 

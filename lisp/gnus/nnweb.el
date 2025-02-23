@@ -1,6 +1,6 @@
 ;;; nnweb.el --- retrieving articles via web search engines  -*- lexical-binding: t; -*-
 
-;; Copyright (C) 1996-2024 Free Software Foundation, Inc.
+;; Copyright (C) 1996-2025 Free Software Foundation, Inc.
 
 ;; Author: Lars Magne Ingebrigtsen <larsi@gnus.org>
 ;; Keywords: news
@@ -42,7 +42,7 @@
 
 (defvoo nnweb-type 'google
   "What search engine type is being used.
-Valid types include `google' and `dejanews'.")
+The only valid type is currently `google'.")
 
 (defvar nnweb-type-definition
   '((google

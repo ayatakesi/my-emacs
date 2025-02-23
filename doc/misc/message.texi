@@ -9,7 +9,7 @@
 @copying
 This file documents Message, the Emacs message composition mode.
 
-Copyright @copyright{} 1996--2024 Free Software Foundation, Inc.
+Copyright @copyright{} 1996--2025 Free Software Foundation, Inc.
 
 @quotation
 Permission is granted to copy, distribute and/or modify this document
@@ -289,12 +289,7 @@ supersede the message in the current buffer.
 
 @vindex message-ignored-supersedes-headers
 Headers matching the @code{message-ignored-supersedes-headers} are
-removed before popping up the new message buffer.  The default is@*
-@samp{^Path:\\|^Date\\|^NNTP-Posting-Host:\\|^Xref:\\|^Lines:\\|@*
-^Received:\\|^X-From-Line:\\|^X-Trace:\\|^X-Complaints-To:\\|@*
-Return-Path:\\|^Supersedes:\\|^NNTP-Posting-Date:\\|^X-Trace:\\|@*
-^X-Complaints-To:\\|^Cancel-Lock:\\|^Cancel-Key:\\|^X-Hashcash:\\|@*
-^X-Payment:\\|^Approved:}.
+removed before popping up the new message buffer.
 
 
 

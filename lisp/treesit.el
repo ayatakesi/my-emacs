@@ -1,6 +1,6 @@
 ;;; treesit.el --- tree-sitter utilities -*- lexical-binding: t -*-
 
-;; Copyright (C) 2021-2024 Free Software Foundation, Inc.
+;; Copyright (C) 2021-2025 Free Software Foundation, Inc.
 
 ;; Maintainer: 付禹安 (Yuan Fu) <casouri@gmail.com>
 ;; Keywords: treesit, tree-sitter, languages
@@ -213,9 +213,11 @@ language and doesn't match the language of the local parser."
                                  (car (treesit-local-parsers-at
                                        pos parser-or-lang))))
                        (treesit-parser-root-node parser))
-                     (treesit-buffer-root-node
-                      (or parser-or-lang
-                          (treesit-language-at pos))))))
+                     (condition-case nil
+                         (treesit-buffer-root-node
+                          (or parser-or-lang
+                              (treesit-language-at pos)))
+                       (treesit-no-parser nil)))))
          (node root)
          (node-before root)
          (pos-1 (max (1- pos) (point-min)))
@@ -3601,7 +3603,7 @@ window."
     ;; Turn off explore mode.
     (remove-hook 'post-command-hook
                  #'treesit--explorer-post-command t)
-    (remove-hook 'post-command-hook
+    (remove-hook 'kill-buffer-hook
                  #'treesit--explorer-kill-explorer-buffer t)
     (treesit--explorer-kill-explorer-buffer)))
 

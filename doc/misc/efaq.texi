@@ -8,7 +8,7 @@
 @include emacsver.texi
 
 @copying
-Copyright @copyright{} 2001--2024 Free Software Foundation, Inc.@*
+Copyright @copyright{} 2001--2025 Free Software Foundation, Inc.@*
 Copyright @copyright{} 1994--2000 Reuven M. Lerner@*
 Copyright @copyright{} 1992--1993 Steven Byrnes@*
 Copyright @copyright{} 1990--1992 Joseph Brian Wells@*
@@ -481,7 +481,7 @@ Emacs help works best if it is invoked by a single key whose value
 should be stored in the variable @code{help-char}.
 
 Some Emacs slides and tutorials can be found at
-@uref{http://web.psung.name/emacs/}.
+@uref{https://web.psung.name/emacs/}.
 
 @node Learning how to do something
 @section How do I find out how to do something in Emacs?
@@ -1889,8 +1889,8 @@ capabilities.
 
 If by contrast you wish to @emph{disable} tty color support, either
 start emacs with the @samp{--color=no} command-line option, or ensure
-that the frame parameter @code{tty-color-mode} is @code{no}, e.g. by
-putting the following in your init file:
+that the frame parameter @code{tty-color-mode} is @code{no}, for example
+by putting the following in your init file:
 
 @lisp
 (push '(tty-color-mode . no) default-frame-alist)
@@ -3687,9 +3687,9 @@ You can tell Emacs the shell's current directory with the command
 @item
 Third party packages.
 
-Any package you install into Emacs can run arbitrary code with the
-same privileges as the Emacs process itself.  Be aware of this when
-you use the package system (e.g. @code{M-x list-packages}) with third
+Any package you install into Emacs can run arbitrary code with the same
+privileges as the Emacs process itself.  Be aware of this when you use
+the package system (for example, @code{M-x list-packages}) with third
 party archives.  Use only third parties that you can trust!
 
 @item

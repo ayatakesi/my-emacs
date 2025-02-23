@@ -1,6 +1,6 @@
 ;;; bookmark.el --- set bookmarks, maybe annotate them, jump to them later -*- lexical-binding: t -*-
 
-;; Copyright (C) 1993-1997, 2001-2024 Free Software Foundation, Inc.
+;; Copyright (C) 1993-1997, 2001-2025 Free Software Foundation, Inc.
 
 ;; Author: Karl Fogel <kfogel@red-bean.com>
 ;; Created: July, 1993
@@ -1584,6 +1584,8 @@ confirmation."
   (when (or no-confirm
             (yes-or-no-p "Permanently delete all bookmarks? "))
     (bookmark-maybe-load-default-file)
+    (dolist (bm bookmark-alist)
+      (bookmark--remove-fringe-mark bm))
     (setq bookmark-alist-modification-count
           (+ bookmark-alist-modification-count (length bookmark-alist)))
     (setq bookmark-alist nil)
@@ -1678,7 +1680,8 @@ for a file, defaulting to the file defined by variable
 	;; Rather than a single call to `pp' we make one per bookmark.
 	;; Apparently `pp' has a poor algorithmic complexity, so this
 	;; scales a lot better.  bug#4485.
-	(dolist (i bookmark-alist) (pp i (current-buffer)))
+	(let ((pp-default-function #'pp-28))
+	  (dolist (i bookmark-alist) (pp i (current-buffer))))
 	(insert ")\n")
 	;; Make sure the specified encoding can safely encode the
 	;; bookmarks.  If it cannot, suggest utf-8-emacs as default.

@@ -1,6 +1,6 @@
 ;;; image-tests.el --- tests for image.el -*- lexical-binding: t -*-
 
-;; Copyright (C) 2019-2024 Free Software Foundation, Inc.
+;; Copyright (C) 2019-2025 Free Software Foundation, Inc.
 
 ;; This file is part of GNU Emacs.
 
@@ -80,14 +80,20 @@
   (should (eq (image-supported-file-p "foo.pbm") 'pbm)))
 
 (ert-deftest image-supported-file-p/optional ()
-  (if (image-type-available-p 'jpeg)
-      (should (eq (image-supported-file-p "foo.jpg") 'jpeg))
-    (should-not (image-supported-file-p "foo.jpg"))))
+  (cond ((image-type-available-p 'jpeg)
+         (should (eq (image-supported-file-p "foo.jpg") 'jpeg)))
+        ((fboundp 'imagemagick-types)
+         (should (eq (image-supported-file-p "foo.jpg") 'imagemagick)))
+        (nil
+         (should-not (image-supported-file-p "foo.jpg")))))
 
 (ert-deftest image-supported-file-p/unsupported-returns-nil ()
   (should-not (image-supported-file-p "foo.some-unsupported-format")))
 
 (ert-deftest image-type-from-file-name ()
+  (skip-unless (and (image-type-available-p 'jpeg)
+                    (image-type-available-p 'png)
+                    (image-type-available-p 'webp)))
   (with-suppressed-warnings ((obsolete image-type-from-file-name))
     (should (eq (image-type-from-file-name "foo.jpg") 'jpeg))
     (should (eq (image-type-from-file-name "foo.png") 'png))

@@ -4,7 +4,7 @@ dnl	autoconf
 dnl in the directory containing this script.
 dnl If you changed any AC_DEFINES, also run autoheader.
 dnl
-dnl Copyright (C) 2023-2024 Free Software Foundation, Inc.
+dnl Copyright (C) 2023-2025 Free Software Foundation, Inc.
 dnl
 dnl  This file is part of GNU Emacs.
 dnl
@@ -22,10 +22,10 @@ dnl  You should have received a copy of the GNU General Public License
 dnl  along with GNU Emacs.  If not, see <https://www.gnu.org/licenses/>.
 
 AC_PREREQ([2.65])
-AC_INIT([libexec], [30.0.93], [bug-gnu-emacs@gnu.org], [],
+AC_INIT([libexec], [30.1], [bug-gnu-emacs@gnu.org], [],
   [https://www.gnu.org/software/emacs/])
 
-AH_TOP([/* Copyright (C) 2024 Free Software Foundation, Inc.
+AH_TOP([/* Copyright (C) 2024-2025 Free Software Foundation, Inc.
 
 This file is part of GNU Emacs.
 

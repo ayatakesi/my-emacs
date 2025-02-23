@@ -1,6 +1,6 @@
 ;;; info-look.el --- major-mode-sensitive Info index lookup facility -*- lexical-binding: t -*-
 
-;; Copyright (C) 1995-1999, 2001-2024 Free Software Foundation, Inc.
+;; Copyright (C) 1995-1999, 2001-2025 Free Software Foundation, Inc.
 
 ;; Author: Ralph Schleicher <rs@ralph-schleicher.de>
 ;; Keywords: help languages
@@ -377,12 +377,13 @@ If optional argument QUERY is non-nil, query for the help mode."
 				  (cons (symbol-name mode-spec) mode-spec)))
 			      (info-lookup->topic-value topic)))
 	 (mode (completing-read
-		(format "Use %s help mode: " topic)
+		(format "Major mode whose manuals to search for this %s: "
+                        topic)
 		completions nil t nil 'info-lookup-history)))
     (or (setq mode (cdr (assoc mode completions)))
-	(error "No %s help available" topic))
+	(error "No manuals available for %s" topic))
     (or (info-lookup->mode-value topic mode)
-	(error "No %s help available for `%s'" topic mode))
+	(error "The manuals of `%s' have no %s help" mode topic))
     (setq info-lookup-mode mode)))
 
 (defun info-lookup--item-to-mode (item mode)

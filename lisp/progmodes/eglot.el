@@ -1,6 +1,6 @@
 ;;; eglot.el --- The Emacs Client for LSP servers  -*- lexical-binding: t; -*-
 
-;; Copyright (C) 2018-2024 Free Software Foundation, Inc.
+;; Copyright (C) 2018-2025 Free Software Foundation, Inc.
 
 ;; Version: 1.17.30
 ;; Author: João Távora <joaotavora@gmail.com>
@@ -251,7 +251,7 @@ automatically)."
      . ,(eglot-alternatives
          '("pylsp" "pyls" ("basedpyright-langserver" "--stdio")
            ("pyright-langserver" "--stdio")
-           "jedi-language-server" "ruff-lsp")))
+           "jedi-language-server" ("ruff" "server") "ruff-lsp")))
     ((js-json-mode json-mode json-ts-mode jsonc-mode)
      . ,(eglot-alternatives '(("vscode-json-language-server" "--stdio")
                               ("vscode-json-languageserver" "--stdio")
@@ -271,6 +271,7 @@ automatically)."
      . ,(eglot-alternatives
          '("clangd" "ccls")))
     (((caml-mode :language-id "ocaml")
+      (ocaml-ts-mode :language-id "ocaml")
       (tuareg-mode :language-id "ocaml") reason-mode)
      . ("ocamllsp"))
     ((ruby-mode ruby-ts-mode)
@@ -284,7 +285,8 @@ automatically)."
      . ("gopls"))
     ((R-mode ess-r-mode) . ("R" "--slave" "-e"
                             "languageserver::run()"))
-    ((java-mode java-ts-mode) . ("jdtls"))
+    ((java-mode java-ts-mode)
+     . ,(eglot-alternatives '("jdtls" "java-language-server")))
     ((dart-mode dart-ts-mode)
      . ("dart" "language-server"
         "--client-id" "emacs.eglot-dart"))
@@ -327,6 +329,7 @@ automatically)."
     ((csharp-mode csharp-ts-mode)
      . ,(eglot-alternatives
          '(("omnisharp" "-lsp")
+           ("OmniSharp" "-lsp")
            ("csharp-ls"))))
     (purescript-mode . ("purescript-language-server" "--stdio"))
     ((perl-mode cperl-mode)
@@ -341,7 +344,8 @@ automatically)."
     (sml-mode
      . ,(lambda (_interactive project)
           (list "millet-ls" (project-root project))))
-    ((blueprint-mode blueprint-ts-mode) . ("blueprint-compiler" "lsp")))
+    ((blueprint-mode blueprint-ts-mode) . ("blueprint-compiler" "lsp"))
+    ((odin-mode odin-ts-mode) . ("ols")))
   "How the command `eglot' guesses the server to start.
 An association list of (MAJOR-MODE . CONTACT) pairs.  MAJOR-MODE
 identifies the buffers that are to be managed by a specific

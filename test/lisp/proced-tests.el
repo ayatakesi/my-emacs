@@ -1,6 +1,6 @@
 ;;; proced-tests.el --- Test suite for proced.el -*- lexical-binding: t -*-
 
-;; Copyright (C) 2022-2024 Free Software Foundation, Inc.
+;; Copyright (C) 2022-2025 Free Software Foundation, Inc.
 
 ;; This file is part of GNU Emacs.
 
@@ -38,10 +38,10 @@
 (defun proced--cpu-at-point ()
   "Return as an integer the current CPU value at point."
   (if (string-suffix-p "nan" (thing-at-point 'sexp))
-      (let ((pid (proced-pid-at-point)))
-        (ert-skip
-         (format
-          "Found NaN value for %%CPU at point for process with PID %d" pid)))
+      (ert-skip
+       (format
+        "Found NaN value for %%CPU at point for process with PID %s"
+        (substring-no-properties (thing-at-point 'sexp))))
     (thing-at-point 'number)))
 
 (defun proced--assert-emacs-pid-in-buffer ()
@@ -61,6 +61,7 @@
   (proced--move-to-column "%CPU")
   (condition-case err
       (>= (proced--cpu-at-point) cpu)
+    (ert-test-skipped (signal (car err) (cdr err)))
     (error
      (ert-fail
       (list err (proced--assert-process-valid-cpu-refinement-explainer cpu))))))

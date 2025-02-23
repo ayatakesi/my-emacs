@@ -4,7 +4,7 @@ dnl	autoconf
 dnl in the directory containing this script.
 dnl If you changed any AC_DEFINES, also run autoheader.
 dnl
-dnl Copyright (C) 1994-1996, 1999-2024 Free Software Foundation, Inc.
+dnl Copyright (C) 1994-1996, 1999-2025 Free Software Foundation, Inc.
 dnl
 dnl  This file is part of GNU Emacs.
 dnl
@@ -23,7 +23,7 @@ dnl  along with GNU Emacs.  If not, see <https://www.gnu.org/licenses/>.
 
 AC_PREREQ([2.65])
 dnl Note this is parsed by (at least) make-dist and lisp/cedet/ede/emacs.el.
-AC_INIT([GNU Emacs], [30.0.93], [bug-gnu-emacs@gnu.org], [],
+AC_INIT([GNU Emacs], [30.1], [bug-gnu-emacs@gnu.org], [],
   [https://www.gnu.org/software/emacs/])
 
 if test "$XCONFIGURE" = "android"; then
@@ -7129,7 +7129,7 @@ fi
 
 version=$PACKAGE_VERSION
 
-copyright="Copyright (C) 2024 Free Software Foundation, Inc."
+copyright="Copyright (C) 2025 Free Software Foundation, Inc."
 AC_DEFINE_UNQUOTED([COPYRIGHT], ["$copyright"],
   [Short copyright string for this version of Emacs.])
 AC_SUBST([copyright])
@@ -7607,7 +7607,7 @@ send your change to bug-gnu-emacs@gnu.org])])])
 
 AH_TOP([/* GNU Emacs site configuration template file.
 
-Copyright (C) 1988-2024 Free Software Foundation, Inc.
+Copyright (C) 1988-2025 Free Software Foundation, Inc.
 
 This file is part of GNU Emacs.
 

@@ -1,6 +1,6 @@
 ;;; recentf.el --- keep track of recently opened files  -*- lexical-binding: t -*-
 
-;; Copyright (C) 1999-2024 Free Software Foundation, Inc.
+;; Copyright (C) 1999-2025 Free Software Foundation, Inc.
 
 ;; Author: David Ponce <david@dponce.com>
 ;; Created: July 19 1999
@@ -523,9 +523,9 @@ See also the command `recentf-open-most-recent-file'."
 
 (defvar recentf-menu-items-for-commands
   (list
-   ["Cleanup list"
+   ["Clean up list"
     recentf-cleanup
-    :help "Remove duplicates, and obsoletes files from the recent list"
+    :help "Remove duplicates, and obsolete files from the recent list"
     :active t]
    ["Edit list..."
     recentf-edit-list

@@ -1,6 +1,6 @@
 ;; wid-edit.el --- Functions for creating and using widgets -*- lexical-binding:t -*-
 ;;
-;; Copyright (C) 1996-1997, 1999-2024 Free Software Foundation, Inc.
+;; Copyright (C) 1996-1997, 1999-2025 Free Software Foundation, Inc.
 ;;
 ;; Author: Per Abrahamsen <abraham@dina.kvl.dk>
 ;; Maintainer: emacs-devel@gnu.org
@@ -2550,12 +2550,9 @@ If the item is checked, CHOSEN is a cons whose cdr is the value."
 			     (widget-create-child-value
 			      widget type (cdr chosen)))
 			    (t
-			     (widget-create-child-value
-			      widget type (car (cdr chosen)))
-                             ;; This somehow breaks :options and other
-                             ;; Custom features.
-                             ;; (widget-specify-selected child)
-                             ))))
+                             (widget-specify-selected child)
+                             (widget-create-child-value
+                              widget type (car (cdr chosen)))))))
 	       (t
 		(error "Unknown escape `%c'" escape)))))
      ;; Update properties.

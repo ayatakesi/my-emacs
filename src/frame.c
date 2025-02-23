@@ -1,6 +1,6 @@
 /* Generic frame functions.
 
-Copyright (C) 1993-1995, 1997, 1999-2024 Free Software Foundation, Inc.
+Copyright (C) 1993-1995, 1997, 1999-2025 Free Software Foundation, Inc.
 
 This file is part of GNU Emacs.
 
@@ -6795,11 +6795,11 @@ Gtk+ tooltips are not used) and on Windows.  */);
   tooltip_reuse_hidden_frame = false;
 
   DEFVAR_BOOL ("use-system-tooltips", use_system_tooltips,
-	       doc: /* Use the toolkit to display tooltips.
-This option is only meaningful when Emacs is built with GTK+ or Haiku
-windowing support, and results in tooltips that look like those
-displayed by other GTK+ or Haiku programs, but will not be able to
-display text properties inside tooltip text.  */);
+	       doc: /* Whether to use the toolkit to display tooltips.
+This option is only meaningful when Emacs is built with GTK+, NS or Haiku
+windowing support, and, if it's non-nil (the default), it results in
+tooltips that look like those displayed by other GTK+/NS/Haiku programs,
+but will not be able to display text properties inside tooltip text.  */);
   use_system_tooltips = true;
 
   DEFVAR_LISP ("iconify-child-frame", iconify_child_frame,

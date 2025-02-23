@@ -1,6 +1,6 @@
 ;;; shr-tests.el --- tests for shr.el  -*- lexical-binding: t; -*-
 
-;; Copyright (C) 2016-2024 Free Software Foundation, Inc.
+;; Copyright (C) 2016-2025 Free Software Foundation, Inc.
 
 ;; Author: Lars Ingebrigtsen <larsi@gnus.org>
 
@@ -135,7 +135,9 @@ settings, then once more for each (OPTION . VALUE) pair.")
 
 (ert-deftest shr-test/zoom-image ()
   "Test that `shr-zoom-image' properly replaces the original image."
-  (skip-unless (bound-and-true-p image-types))
+  (skip-unless (and (bound-and-true-p image-types)
+                    (image-type-available-p 'png)
+                    (fboundp 'libxml-parse-html-region)))
   (let* ((image (expand-file-name "data/image/blank-100x200.png"
                                   (getenv "EMACS_TEST_DIRECTORY")))
          (image-url (concat "file://" (if (string-prefix-p "/" image)

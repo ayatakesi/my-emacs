@@ -1,6 +1,6 @@
 ;;; go-ts-mode.el --- tree-sitter support for Go  -*- lexical-binding: t; -*-
 
-;; Copyright (C) 2022-2024 Free Software Foundation, Inc.
+;; Copyright (C) 2022-2025 Free Software Foundation, Inc.
 
 ;; Author     : Randy Taylor <dev@rjt.dev>
 ;; Maintainer : Randy Taylor <dev@rjt.dev>
@@ -28,6 +28,7 @@
 ;;; Code:
 
 (require 'treesit)
+(require 'c-ts-common)
 (eval-when-compile (require 'rx))
 
 (declare-function treesit-parser-create "treesit.c")
@@ -90,9 +91,11 @@
      ((parent-is "parameter_list") parent-bol go-ts-mode-indent-offset)
      ((parent-is "select_statement") parent-bol 0)
      ((parent-is "type_case") parent-bol go-ts-mode-indent-offset)
+     ((parent-is "type_declaration") parent-bol go-ts-mode-indent-offset)
      ((parent-is "type_spec") parent-bol go-ts-mode-indent-offset)
      ((parent-is "type_switch_statement") parent-bol 0)
      ((parent-is "var_declaration") parent-bol go-ts-mode-indent-offset)
+     ((parent-is "var_spec_list") parent-bol go-ts-mode-indent-offset)
      (no-node parent-bol 0)))
   "Tree-sitter indent rules for `go-ts-mode'.")
 
@@ -256,9 +259,7 @@
     (treesit-parser-create 'go)
 
     ;; Comments.
-    (setq-local comment-start "// ")
-    (setq-local comment-end "")
-    (setq-local comment-start-skip (rx "//" (* (syntax whitespace))))
+    (c-ts-common-comment-setup)
 
     ;; Navigation.
     (setq-local treesit-defun-type-regexp
@@ -456,9 +457,7 @@ what the parent of the node would be if it were a node."
     (treesit-parser-create 'gomod)
 
     ;; Comments.
-    (setq-local comment-start "// ")
-    (setq-local comment-end "")
-    (setq-local comment-start-skip (rx "//" (* (syntax whitespace))))
+    (c-ts-common-comment-setup)
 
     ;; Indent.
     (setq-local indent-tabs-mode t

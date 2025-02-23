@@ -8,7 +8,7 @@
 @syncodeindex pg cp
 
 @copying
-Copyright @copyright{} 1995--2024 Free Software Foundation, Inc.
+Copyright @copyright{} 1995--2025 Free Software Foundation, Inc.
 
 @quotation
 Permission is granted to copy, distribute and/or modify this document
@@ -17204,7 +17204,7 @@ filename is unrelated to the article number in Gnus. @code{nnmaildir}
 also stores the equivalent of @code{nnml}'s overview files in one file
 per article, so it uses about twice as many inodes as @code{nnml}.
 (Use @code{df -i} to see how plentiful your inode supply is.)  If this
-slows you down or takes up very much space, a non-block-structured
+slows you down or takes up very much space, use a non-block-structured
 file system.
 
 Since maildirs don't require locking for delivery, the maildirs you use
@@ -18611,7 +18611,7 @@ sending the diary message to them as well.
 @cindex Gnus agent
 @cindex Gnus unplugged
 
-In olden times (ca. February '88), people used to run their newsreaders
+In olden times (ca.@: February '88), people used to run their newsreaders
 on big machines with permanent connections to the net.  News transport
 was dealt with by news servers, and all the newsreaders had to do was to
 read news.  Believe it or not.
@@ -22380,6 +22380,7 @@ First of: you really need a patched mairix binary for using the marks
 propagation feature efficiently.  Otherwise, you would have to update
 the mairix database all the time.  You can get the patch at
 
+@c FIXME: This link is broken as of 2025-01-26.
 @uref{http://www.randomsample.de/mairix-maildir-patch.tar}
 
 You need the mairix v0.21 source code for this patch; everything else
@@ -23348,7 +23349,7 @@ windows resized.
 Lastly, it's possible to make Gnus window layouts ``atomic''
 (@pxref{Atomic Windows, , Atomic Windows, elisp, The GNU Emacs Lisp
 Reference Manual}) by setting @code{gnus-use-atomic-windows} to
-@code{t}.  This will ensure that pop-up buffers (e.g. help or
+@code{t}.  This will ensure that pop-up buffers (e.g., help or
 completion buffers), will appear below or to the side of the entire
 Gnus window layout and not, for example, squashed between the summary
 and article buffers.
@@ -24858,7 +24859,7 @@ particular spam group.  You don't have to throw all mail into all the
 spam tests.  Another reason why this is nice is that messages to
 mailing lists you have rules for don't have to have resource-intensive
 blackhole checks performed on them.  You could also specify different
-spam checks for your nnmail split vs. your nnimap split.  Go crazy.
+spam checks for your nnmail split vs.@: your nnimap split.  Go crazy.
 
 You should set the @code{spam-use-*} variables for whatever spam back
 ends you intend to use.  The reason is that when loading
@@ -26049,7 +26050,7 @@ never install such a back end.
 @cindex spam filtering, naive Bayesian
 
 Paul Graham has written an excellent essay about spam filtering using
-statistics: @uref{http://www.paulgraham.com/spam.html,A Plan for
+statistics: @uref{https://www.paulgraham.com/spam.html,A Plan for
 Spam}.  In it he describes the inherent deficiency of rule-based
 filtering as used by SpamAssassin, for example: Somebody has to write
 the rules, and everybody else has to install these rules.  You are
@@ -26979,7 +26980,7 @@ appropriate name, don't you think?)
 In any case, after spending all that energy on coming up with a new and
 spunky name, we decided that the name was @emph{too} spunky, so we
 renamed it back again to ``Gnus''.  But in mixed case.  ``Gnus'' vs.
-``@sc{gnus}''.  New vs. old.
+``@sc{gnus}''.  New vs.@: old.
 
 @menu
 * Gnus Versions::               What Gnus versions have been released.

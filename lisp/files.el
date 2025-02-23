@@ -1,6 +1,6 @@
-;;; files.el --- file input and output commands for Emacs  -*- lexical-binding:t -*-
+;;; files.el --- file input and output commands  -*- lexical-binding:t -*-
 
-;; Copyright (C) 1985-1987, 1992-2024 Free Software Foundation, Inc.
+;; Copyright (C) 1985-1987, 1992-2025 Free Software Foundation, Inc.
 
 ;; Maintainer: emacs-devel@gnu.org
 ;; Package: emacs
@@ -22,9 +22,9 @@
 
 ;;; Commentary:
 
-;; Defines most of Emacs's file- and directory-handling functions,
-;; including basic file visiting, backup generation, link handling,
-;; ITS-id version control, load- and write-hook handling, and the like.
+;; Defines Emacs's basic file- and directory-handling functions,
+;; including file visiting, backup file generation and versioning,
+;; link handling, load- and write-hook handling, and the like.
 
 ;;; Code:
 
@@ -724,11 +724,12 @@ enabled (for example, when it is added to a mode hook).
 Each element of the list should be a string:
 - If it ends in \"/\", it is considered as a directory name and means that
   Emacs should trust all the files whose name has this directory as a prefix.
-- else it is considered as a file name.
+- Otherwise, it is considered a file name.
 Use abbreviated file names.  For example, an entry \"~/mycode/\" means
 that Emacs will trust all the files in your directory \"mycode\".
 This variable can also be set to `:all', in which case Emacs will trust
-all files, which opens a gaping security hole."
+all files, which opens a gaping security hole.  Emacs Lisp authors
+should note that this value must never be set by a major or minor mode."
   :type '(choice (repeat :tag "List" file)
                  (const :tag "Trust everything (DANGEROUS!)" :all))
   :version "30.1")

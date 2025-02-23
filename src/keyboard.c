@@ -1,6 +1,6 @@
 /* Keyboard and mouse input; editor command loop.
 
-Copyright (C) 1985-1989, 1993-1997, 1999-2024 Free Software Foundation,
+Copyright (C) 1985-1989, 1993-1997, 1999-2025 Free Software Foundation,
 Inc.
 
 This file is part of GNU Emacs.
@@ -2681,7 +2681,7 @@ read_char (int commandflag, Lisp_Object map,
 	    /* Normal case: no input arrived during redisplay.  */
 	    break;
 
-	  /* Input arrived and pre-empted redisplay.
+	  /* Input arrived and preempted redisplay.
 	     Process any events which are not user-visible.  */
 	  swallow_events (false);
 	  /* If that cleared input_pending, try again to redisplay.  */
